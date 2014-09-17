@@ -1,11 +1,12 @@
 .sheet() {
 	background-color: white;
-	border-bottom: 1px solid #c4c4c4;
-	border-left: 1px solid #d3d3d3;
-	border-right: 1px solid #d3d3d3;
-	border-top: 1px solid #d3d3d3;
+	border-bottom: 1px solid rgba(220,220,220,.40);
+	border-left: 1px solid rgba(240,240,240,.40);
+	border-right: 1px solid rgba(240,240,240,.40);
+	border-top: 1px solid rgba(240,240,240,.40);
 	box-shadow: 0 1px 0 rgba(0,0,0,0.07);
 }
+
 .button() {
 	color: #828282;
 	cursor: pointer;
@@ -40,6 +41,25 @@
 		box-shadow: 0 0px 0 0 rgba(0,0,0,.1), inset 0px 0px 0px 1px rgba(255, 255, 255, .6);
 	}
 }
+.button {
+	.button();
+}
+.blend() {
+	border: none;
+	background-color: transparent;
+	box-shadow: none;
+	&:focus,
+	&:active,
+	&:hover {
+		border: none;
+		background-color: transparent;
+		box-shadow: none;
+	}
+}
+
+.blend {
+	.blend();
+}
 .disc() {
 	border-radius: 50%;
 }
@@ -60,6 +80,11 @@
           animation-name: pulseBig;
 }
 
+
+.transform(@t) {
+	-webkit-transform: @t;
+            transform: @t;
+}
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
@@ -128,4 +153,47 @@
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
   }
+}
+
+@-webkit-keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+}
+
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+}
+
+.bounceOut {
+  -webkit-animation-name: bounceOut;
+          animation-name: bounceOut;
 }
