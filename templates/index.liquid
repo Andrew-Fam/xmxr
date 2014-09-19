@@ -25,7 +25,7 @@
             <!-- MY AWESOME BUTTONS -->
 
             <div class="q-card compressed">
-              <div class="compressed-content-wrap">
+              <div class="compressed-content-wrap" tabindex="0">
                 <div class="compressed-content">
                   <div class="a-icon i-mcq">
                     <div class="shape indent">
@@ -74,7 +74,7 @@
                       <em>You can add as many possible answer as you want. Just remember to select at least one as the correct answer.</em>
                     </div>
                     <div class="col-sm-9">
-                      <button class="btn btn-primary">
+                      <button class="btn btn-success">
                         Add Answer
                       </button>
                     </div>
@@ -101,6 +101,9 @@
                       <button class="btn btn-success btn-lg">
                         Save question
                       </button>
+                      <button class="btn btn-default btn-lg cancel">
+                        Cancel
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -108,7 +111,7 @@
             </div>
 
             <div class="q-card compressed">
-              <div class="compressed-content-wrap">
+              <div class="compressed-content-wrap" tabindex="0">
                 <div class="compressed-content">
                   <div class="a-icon i-short-answer">
                     <div class="shape  d spin indent">
@@ -130,10 +133,59 @@
                   </div>
                 </div>
               </div>
+              <div class="decompressed-content-wrap">
+                <div class="container-fluid">
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label for="s-q">Question</label>
+                      <em>Lorem ipsum dolor sitar...</em>
+                    </div>
+                    <div class="col-sm-9">
+                      <textarea id="s-q" placeholder="Write your question here" class="form-control" rows="5"></textarea>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label for="s-a">Answer</label>
+                      <em>Of course we can't read your answer and compare it to the student's answer, the computer is not that intelligent yet! This is just for your own reference when you mark them.</em>
+                    </div>
+                    <div class="col-sm-9">
+                      <textarea id="s-a" placeholder="Write your sample answer here" class="form-control" rows="5"></textarea>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label>Tag(s)</label>
+                      <em>Enter a maximum of 10 keywords. They will be helpful when you want to search for this question.</em>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="form-control">
+                        <span class="badge">lorem</span>
+                        <span class="badge">ipsum</span>
+                        <span class="badge">dolor</span>
+                        <span class="badge">sultan</span>
+                        <input class="blend" type="text" placeholder="Add a tag"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-9">
+                      <button class="btn btn-success btn-lg">
+                        Save question
+                      </button>
+                      <button class="btn btn-default btn-lg cancel">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="q-card compressed">
-              <div class="compressed-content-wrap">
+              <div class="compressed-content-wrap" tabindex="0">
                 <div class="compressed-content">
                   <div class="a-icon i-fill-in-blanks">
                     <div class="shape d spin i-fill-in-blanks-1">
@@ -175,7 +227,7 @@
 
 
             <div class="q-card compressed">
-              <div class="compressed-content-wrap">
+              <div class="compressed-content-wrap" tabindex="0">
                 <div class="compressed-content">
                   <div class="a-icon i-match">
                     <div class="shape">

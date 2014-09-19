@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.q-card').click(function(){
+	$('body').on('click','.q-card.compressed',function(){
 		var icon = $(this);
 
 		if(icon.hasClass('loading')) {
@@ -14,9 +14,13 @@ $(document).ready(function(){
 
 
 		setTimeout(function(){
-			icon.addClass('decompressed');
+			icon.removeClass('compressed').addClass('decompressed');
 		},750, function(){
 			icon.removeClass('loading');
 		});
+	});
+
+	$('body').on('click','.q-card .cancel', function(){
+		$('.q-card').removeClass('loading decompressed dismissed').addClass('compressed');
 	});
 });
